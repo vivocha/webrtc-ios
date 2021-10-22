@@ -132,23 +132,23 @@ jobs:
           TARGET_CPU: "arm64"
           ENVIROMENT: "device"
 
-      - name: Build mac x64
-        if: env.should_build == 'true'
-        run: |
-          cd src
-          source "${GITHUB_WORKSPACE}/scripts/build_webrtc.sh" 
-        env:
-          TARGET_OS: "mac"
-          TARGET_CPU: "x64"
+      #- name: Build mac x64
+      #  if: env.should_build == 'true'
+      #  run: |
+      #    cd src
+      #    source "${GITHUB_WORKSPACE}/scripts/build_webrtc.sh" 
+      #  env:
+      #    TARGET_OS: "mac"
+      #    TARGET_CPU: "x64"
       
-      - name: Build mac arm64
-        if: env.should_build == 'true'
-        run: |
-          cd src
-          source "${GITHUB_WORKSPACE}/scripts/build_webrtc.sh" 
-        env:
-          TARGET_OS: "mac"
-          TARGET_CPU: "arm64"
+      #- name: Build mac arm64
+      #  if: env.should_build == 'true'
+      #  run: |
+      #    cd src
+      #    source "${GITHUB_WORKSPACE}/scripts/build_webrtc.sh" 
+      #  env:
+      #    TARGET_OS: "mac"
+      #    TARGET_CPU: "arm64"
       
       - name: Create XCFramefork
         id: create_xcframework
