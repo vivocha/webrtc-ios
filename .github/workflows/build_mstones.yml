@@ -17,6 +17,7 @@ env:
 
   IOS_32_BIT: ${{ true }}
   ENABLE_IOS_BITCODE: ${{ true }}
+  USE_XCODE_CLANG: ${{ false }}
   
 jobs:
   
