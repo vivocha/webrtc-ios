@@ -25,17 +25,17 @@ cd src
 
 sed -i '' 's/-ffile-compilation-dir/-fdebug-compilation-dir/g' ./build/config/compiler/BUILD.gn
 
-TARGET_OS="ios"
-TARGET_CPU="x86"
-ENVIROMENT="simulator"
+#TARGET_OS="ios"
+#TARGET_CPU="x86"
+#ENVIROMENT="simulator"
 
-source $BUILD_SCRIPT
+#source $BUILD_SCRIPT
 
-TARGET_OS="ios"
-TARGET_CPU="arm"
-ENVIROMENT="device"
+#TARGET_OS="ios"
+#TARGET_CPU="arm"
+#ENVIROMENT="device"
 
-source $BUILD_SCRIPT
+#source $BUILD_SCRIPT
 
 TARGET_OS="ios"
 TARGET_CPU="x64"
@@ -55,15 +55,15 @@ ENVIROMENT="device"
 
 source $BUILD_SCRIPT
 
-TARGET_OS="mac"
-TARGET_CPU="x64"
-unset ENVIROMENT
+#TARGET_OS="mac"
+#TARGET_CPU="x64"
+#unset ENVIROMENT
 
-source $BUILD_SCRIPT
+#source $BUILD_SCRIPT
 
-TARGET_OS="mac"
-TARGET_CPU="arm64"
+#TARGET_OS="mac"
+#TARGET_CPU="arm64"
 
-source $BUILD_SCRIPT
+#source $BUILD_SCRIPT
 
 cd ..
