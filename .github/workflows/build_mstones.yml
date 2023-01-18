@@ -79,24 +79,6 @@ jobs:
         env:
           WEBRTC_BRANCH: ${{ env.next_release_branch  }}
 
-      - name: Patch for M94
-        run: |          
-          sed -i '' 's/-ffile-compilation-dir/-fdebug-compilation-dir/g' "${GITHUB_WORKSPACE}/src/build/config/compiler/BUILD.gn"
-
-      - name: Patch for M95
-        run :
-          sed -i '' 's/cflags += \[ "-gdwarf-aranges" \]/# cflags += \[ "-gdwarf-aranges" \]/g' "${GITHUB_WORKSPACE}/src/build/config/compiler/BUILD.gn"
-         
-      - name: Build ios x86 simulator
-        if: env.should_build == 'true' && env.IOS_32_BIT == 'true'
-        run: |
-          cd src
-          source "${GITHUB_WORKSPACE}/scripts/build_webrtc.sh" 
-        env:
-          TARGET_OS: "ios"
-          TARGET_CPU: "x86"
-          ENVIROMENT: "simulator"
-
       - name: Build ios x64 simulator
         if: env.should_build == 'true'
         run: |
@@ -117,16 +99,6 @@ jobs:
           TARGET_CPU: "arm64"
           ENVIROMENT: "simulator"
 
-      - name: Build ios arm device
-        if: env.should_build == 'true' && env.IOS_32_BIT == 'true'
-        run: |
-          cd src
-          source "${GITHUB_WORKSPACE}/scripts/build_webrtc.sh" 
-        env:
-          TARGET_OS: "ios"
-          TARGET_CPU: "arm"
-          ENVIROMENT: "device"
-    
       - name: Build ios arm64 device
         if: env.should_build == 'true'
         run: |
@@ -137,24 +109,6 @@ jobs:
           TARGET_CPU: "arm64"
           ENVIROMENT: "device"
 
-      - name: Build mac x64
-        if: env.should_build == 'true'
-        run: |
-          cd src
-          source "${GITHUB_WORKSPACE}/scripts/build_webrtc.sh" 
-        env:
-          TARGET_OS: "mac"
-          TARGET_CPU: "x64"
-      
-      - name: Build mac arm64
-        if: env.should_build == 'true'
-        run: |
-          cd src
-          source "${GITHUB_WORKSPACE}/scripts/build_webrtc.sh" 
-        env:
-          TARGET_OS: "mac"
-          TARGET_CPU: "arm64"
-      
       - name: Create XCFramefork
         id: create_xcframework
         if: env.should_build == 'true'
