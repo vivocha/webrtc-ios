@@ -1,4 +1,4 @@
-name: Release WebRTC [86, 87, 88, 89, 90, 91]
+name: Release WebRTC [109]
 
 on:
   workflow_dispatch:    
@@ -21,11 +21,11 @@ env:
 jobs:
   
   build:
-    runs-on: macOS-11
+    runs-on: macos-latest
 
     strategy:
       matrix:
-        milestone: [86, 87, 88, 89, 90, 91]
+        milestone: [109]
 
     steps:      
       - uses: actions/checkout@v2
