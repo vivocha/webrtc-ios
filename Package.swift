@@ -13,8 +13,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "WebRTC", 
-            url: "https://github.com/alexpiezo/WebRTC/releases/download/95.4638.0/WebRTC-M95.xcframework.zip",
-            checksum: "b49d47cdbbd7d72b03a340aa1b55591b82824926ada8a54be992addf614c8325"
+            url: "https://github.com/vivocha/webrtc-ios/releases/download/113.5672.0/WebRTC-M113.xcframework.zip",
+            checksum: "967d0ebf1f7263d7d4b8a1b175517cd2b97591917f8edf0cf647143723b5ec67"
         )        
     ]
 )
