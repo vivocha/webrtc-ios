@@ -1,7 +1,7 @@
 #!/bin/sh
 
 TARGET_OS="${TARGET_OS:-ios}" # ios | mac
-TARGET_CPU="${TARGET_CPU:-x64}" # x86 | arm | x64 | arm64
+TARGET_CPU="${TARGET_CPU:-arm64}" # x86 | arm | x64 | arm64
 ENVIROMENT="${ENVIROMENT:-'simulator'}" # simulator | device
 OUTPUT_DIR="../out"
 
