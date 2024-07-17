@@ -1,4 +1,4 @@
-name: OnDemand Release WebRTC [109, 110, 111]
+name: OnDemand Release WebRTC [127]
 
 on:
   workflow_dispatch:    
@@ -25,7 +25,7 @@ jobs:
 
     strategy:
       matrix:
-        milestone: [109, 110, 111]
+        milestone: [127]
 
     steps:      
       - uses: actions/checkout@v2
