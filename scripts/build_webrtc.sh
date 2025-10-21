@@ -25,7 +25,6 @@ then
     target_environment=\"${ENVIROMENT}\" \
     ios_deployment_target=\"11.0\" \
     ios_enable_code_signing=${IOS_ENABLE_CODE_SIGNING:-false} \
-    enable_ios_bitcode=${ENABLE_IOS_BITCODE:-false} \
     use_xcode_clang=${USE_XCODE_CLANG:-true} \
     use_goma=${USE_GOMA:-false}\
     "
