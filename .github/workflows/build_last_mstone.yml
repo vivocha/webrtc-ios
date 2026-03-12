@@ -18,8 +18,8 @@ env:
 
   output_dir: "./out"
 
-  IOS_32_BIT: ${{ true }}
-  ENABLE_IOS_BITCODE: ${{ true }}  
+  IOS_32_BIT: ${{ false }}
+  ENABLE_IOS_BITCODE: ${{ false }}  
   
 jobs:
   
